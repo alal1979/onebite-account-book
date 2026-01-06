@@ -1,0 +1,59 @@
+.TransactionItem {
+  display: flex;  
+  justify-content: space-between;
+  background-color: rgba(59, 51, 99, 0.714);
+  padding: 15px 10px;
+  margin-bottom: 10px;
+}
+
+.TransactionItem .category_wrapper { 
+  display: flex;
+  justify-content: center;
+  width : 10%;
+  background-color: rgb(6, 6, 6);
+  border-radius: 5px;
+  padding: 0px 5px;
+  
+}
+
+.TransactionItem .name_wrapper {    
+   padding : 0px 20px;
+   flex: 1; 
+   width : 35%;
+}
+
+.TransactionItem .amount_wrapper_expense { 
+   display: flex;
+   justify-content: flex-end;
+   padding-right: 10px;
+   color: rgb(247, 4, 4); 
+   width : 20%;
+ 
+}
+
+.TransactionItem .amount_wrapper_income {
+   display: flex;
+   justify-content: flex-end;
+   padding-right: 10px;
+   color: rgb(84, 245, 84); 
+   width : 20%; 
+}
+
+.TransactionItem .date_wrapper {
+   color: rgb(96, 96, 100);
+   width : 20%;
+    padding: 0px 20px; 
+} 
+
+.TransactionItem .button_wrapper {
+   width : 15%;
+   display: flex;
+   gap: 10px;
+}
+
+.TransactionItem .button_wrapper > button {
+   color: white;
+   font-size: 12px;
+   background-color: rgb(5, 5, 5);
+   border-radius: 5px;
+  }

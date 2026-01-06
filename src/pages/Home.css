@@ -1,0 +1,13 @@
+.header_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header_wrapper div button{
+  background-color: rgb(104, 21, 237);
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.932);
+}
