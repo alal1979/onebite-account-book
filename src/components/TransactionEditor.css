@@ -9,6 +9,7 @@
    padding : 10px 0px;
    margin : 10px 0;
    background-color: rgba(59, 51, 99, 0.714);
+     color: rgb(96, 96, 100);
 } 
 
 .TransactionEditor .name_wrapper {
@@ -17,6 +18,7 @@
    padding : 10px 0px;
    margin : 10px 0;
    background-color: rgba(59, 51, 99, 0.714);
+   color: rgb(96, 96, 100);
 } 
 
 
@@ -26,6 +28,7 @@
    padding : 10px 0px;
    margin : 10px 0;
    background-color: rgba(59, 51, 99, 0.714);
+   color: rgb(96, 96, 100);
 } 
 
 .TransactionEditor .category_wrapper {
@@ -34,6 +37,7 @@
    padding : 10px 0px;
    margin : 10px 0;
    background-color: rgba(59, 51, 99, 0.714);
+     color: rgb(253, 251, 251);
 } 
 
 .TransactionEditor .date_wrapper {
@@ -43,6 +47,7 @@
    margin : 10px 0;
    margin-bottom: 50px;
    background-color: rgba(59, 51, 99, 0.714);
+    color: rgb(253, 251, 251);
 } 
 
 .TransactionEditor .button_wrapper {
@@ -50,4 +55,11 @@
    width:100%;
    padding : 10px 0px;
    margin : 10px 0;
+   background-color: rgb(104, 21, 237);
+   color: rgba(255, 255, 255, 0.932); 
+   border-radius: 10px;
 } 
+
+.TransactionEditor .button_wrapper.red {
+    background-color: rgb(247, 8, 8);
+}

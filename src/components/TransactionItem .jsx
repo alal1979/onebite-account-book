@@ -1,6 +1,9 @@
+ 
 import "./TransactionItem.css";
 
 const TransactionItem= ({category,name,amount,date,type}) => {
+
+
 
   return <div className="TransactionItem">
     <div className="category_wrapper">{category}</div>
