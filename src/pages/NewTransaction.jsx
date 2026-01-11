@@ -15,7 +15,7 @@ const NewTransaction = () =>{
   return (
     <>
       <h1>새로운 기록</h1>
-       <TransactionEditor onSubmit={onSubmit}/>
+       <TransactionEditor onSubmit={onSubmit} type="NEW"/>
     </> 
   ) ;
 };

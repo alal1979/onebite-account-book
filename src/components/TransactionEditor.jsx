@@ -1,11 +1,10 @@
-import { useState , useRef } from "react";
+import { useState , useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import "./TransactionEditor.css"; 
 
 
-const TransactionEditor = ({onSubmit}) =>{
-   
+const TransactionEditor = ({initData, type, onSubmit}) =>{
     const [state, setState ] = useState({
       type :"",
       name : "",
@@ -13,6 +12,18 @@ const TransactionEditor = ({onSubmit}) =>{
       category : "",
       date : new Date(), 
     });
+
+   if(type === "EDIT"){
+      useEffect(()=>{
+        if(initData){
+          setState({
+            ...initData,
+            date : new Date(Number(initData.date)),
+          })
+        }
+      },[initData]) ;
+    }
+
 
    const typeRef = useRef(null);
    const nameRef = useRef(null);
@@ -40,9 +51,7 @@ const TransactionEditor = ({onSubmit}) =>{
      if(state.category.trim() === ""){
         categoryRef.current.focus();
         return;
-      }; 
- 
- 
+      };  
 
       onSubmit(state);
    }
@@ -66,18 +75,18 @@ const TransactionEditor = ({onSubmit}) =>{
 
 
     const getStringedDate = (targetDate) =>{
-    let year = targetDate.getFullYear();
-    let month = targetDate.getMonth() + 1;
-    let date = targetDate.getDate();
+      let year = targetDate.getFullYear();
+      let month = targetDate.getMonth() + 1;
+      let date = targetDate.getDate();
 
-    if(month < 10){
-      month = `0${month}`;
-    }
-    if(date < 10){
-      date = `0${date}`;
-    }
-    
-    return `${year}-${month}-${date}`;
+      if(month < 10){
+        month = `0${month}`;
+      }
+      if(date < 10){
+        date = `0${date}`;
+      }
+      
+      return `${year}-${month}-${date}`;
   } 
 
 

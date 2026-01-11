@@ -81,7 +81,7 @@ function App() {
         category,
         date,
       },
-    })
+    });
   }
 
   const onDeleteTransaction =(id)=>{
