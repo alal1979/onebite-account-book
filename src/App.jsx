@@ -52,7 +52,7 @@ export const TransactionStateContext  = createContext();
 export const TransactionDispatchContext  = createContext();
 
 function App() {
-  const [transactions, setTransactions] = useReducer(reducer,mockData);
+  const [transactions, dispatch] = useReducer(reducer,mockData);
   const idRef = useRef(3);
 
   const onCreateTransaction = (name, amount,type , category,date) =>{
@@ -67,7 +67,7 @@ function App() {
         date,
       },
     });
-  }
+  };
 
 
   const onUpdateTransaction = (id, name,amount,type,category,date)=>{
@@ -85,7 +85,7 @@ function App() {
   }
 
   const onDeleteTransaction =(id)=>{
-    ditpatch({
+    dispatch({
       type:"DELETE",
       id,
     });
